@@ -3,7 +3,7 @@
 ## 📊 Overview
 This project analyzes U.S. airline on-time performance using data from the U.S. Department of Transportation (Bureau of Transportation Statistics). The dataset was queried using AWS Athena after being processed through AWS Glue Crawlers and hosted on S3. Visualizations were created with Amazon QuickSight.
 
-The project was part of a capstone assignment in a Business Analytics program's ***Business Analysis with Structured Data*** course, completed under significant time constraints—less than two days—while managing other concurrent coursework and deliverables. Despite this, I delivered a full-stack analytical solution using only SQL and cloud-native tools to extract actionable insights for executive stakeholders.
+The project was part of a capstone assignment in a Business Analytics program's *Business Analysis with Structured Data* course, completed under significant time constraints—less than two days—while managing other concurrent coursework and deliverables. Despite this, I delivered a full-stack analytical solution using only SQL and cloud-native tools to extract actionable insights for executive stakeholders.
 
 ## 📌 Key Business Questions Answered
 1. **Top Airlines by Year** – Which carriers flew the most, and what patterns emerged?
