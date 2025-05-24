@@ -37,11 +37,9 @@ The project was part of a capstone assignment in a Business Analytics program, c
   - `A1 - Analysis of Carrier On-Time Performance by Awale Abdi.pdf` – full executive-style report with visual insights and findings  
   - `A1 - Analysis of Carrier On-Time Performance by Awale Abdi-1.txt` – well-documented SQL queries used in Athena  
   - `README.md` – project overview, methodology, and actionable insights summary  
-  - `Visualizations/` – organized into two subfolders:
-   - `Quicksight Visualizations/` – exported charts from Amazon QuickSight  
-    - Includes bar charts, line graphs, scatterplots, and other visuals used in the final report  
-   - `Various CSVs Generated for Making Visualizations (not all used)/` – Athena query result exports  
-    - Contains raw data slices prepared for charting and intermediate analysis  
+  - `Visualizations/` – collection of supporting visual assets  
+    - Exported charts created with Amazon QuickSight (bar charts, line graphs, scatterplots, etc.)  
+    - CSVs exported from AWS Athena used to create or support visualizations (not all were used)  
 
 
 ## 🧩 Challenges Faced
