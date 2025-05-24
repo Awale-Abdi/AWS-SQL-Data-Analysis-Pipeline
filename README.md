@@ -1,9 +1,14 @@
 <h1 align="center">Airline Delay Analytics: AWS Athena + SQL Pipeline for US Flight Performance Insights</h1>
 
 ## 📊 Overview
-This project analyzes U.S. airline on-time performance using data from the U.S. Department of Transportation (Bureau of Transportation Statistics). The dataset was queried using AWS Athena after being processed through AWS Glue Crawlers and hosted on S3. Visualizations were created with Amazon QuickSight.
 
-The project was part of a capstone assignment in a Business Analytics course centered analyzing structured data, completed under significant time constraints—less than two days—while managing other concurrent coursework and deliverables. Despite this, I delivered a full-stack analytical solution using only SQL and cloud-native tools to extract actionable insights for executive stakeholders.
+This Excel-based time series forecasting project analyzes 15 years of U.S. hardware and tools retail sales data to generate a 12-month predictive sales forecast. Completed as part of a graduate-level **Supply Chain Analytics** course, the assignment placed me in the role of a **Supply-Chain Analyst** tasked with producing a highly accurate monthly sales forecast to inform internal resource planning—materials, staffing, and financial capacity for the upcoming fiscal year.
+
+The core analysis—including model construction, validation, and communication—was performed in under **90 minutes as part of a timed 3-hour final exam**, simulating a real-world corporate decision-making environment. The task required evaluating industry sales data (Sep 2005–Aug 2020), forecasting future demand (Sep 2020–Aug 2021), and benchmarking against actual 2021 results.
+
+📊 A separate *Forecast vs. Actual Sales* validation sheet is included to compare the forecast against real 2021 Census retail sales figures. This comparison demonstrates forecast realism and business applicability using Mean Absolute Percentage Error (MAPE) and trend visualization.
+
+The final forecast is presented in a concise executive summary tailored for operational stakeholders, delivering clear, actionable insights. Also included is a reusable Time Series Forecasting Playbook authored to document the complete modeling workflow. It serves as both a practical forecasting guide and evidence of applied proficiency in time series forecasting techniques using Excel.
 
 ## 📌 Key Business Questions Answered
 1. **Top Airlines by Year** – Which carriers flew the most, and what patterns emerged?
