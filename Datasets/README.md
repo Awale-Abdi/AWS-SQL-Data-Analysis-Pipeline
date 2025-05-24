@@ -1,4 +1,4 @@
-# ✈️ Raw Dataset Hosting Note
+# ✈️ I hosted the Dataset Externally
 
 Due to GitHub's file size limitations, the full raw dataset for this project has been hosted externally on **AWS S3**.
 
