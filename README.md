@@ -1,9 +1,9 @@
-# Airline Delay Analytics: AWS Athena + SQL Pipeline for US Flight Performance Insights
+<h1 align="center">Airline Delay Analytics: AWS Athena + SQL Pipeline for US Flight Performance Insights</h1>
 
 ## 📊 Overview
 This project analyzes U.S. airline on-time performance using data from the U.S. Department of Transportation (Bureau of Transportation Statistics). The dataset was queried using AWS Athena after being processed through AWS Glue Crawlers and hosted on S3. Visualizations were created with Amazon QuickSight.
 
-The project was part of a capstone assignment in a Business Analytics program. I was required to answer five key business questions related to airline carrier performance using only SQL and cloud-native tools. Despite data limitations (e.g., missing date ranges, lack of time-of-day fields, no passenger data), I built creative workarounds to derive actionable insights for executive stakeholders.
+The project was part of a capstone assignment in a Business Analytics course centered analyzing structured data, completed under significant time constraints—less than two days—while managing other concurrent coursework and deliverables. Despite this, I delivered a full-stack analytical solution using only SQL and cloud-native tools to extract actionable insights for executive stakeholders.
 
 ## 📌 Key Business Questions Answered
 1. **Top Airlines by Year** – Which carriers flew the most, and what patterns emerged?
@@ -25,6 +25,22 @@ The project was part of a capstone assignment in a Business Analytics program. I
 - Maintained SQL best practices: formatted code, added inline comments, grouped logic cleanly.
 - Produced an executive-style report summarizing trends, anomalies, and actionable recommendations.
 
+
+## 📁 Project Structure
+
+- `Datasets/`  
+  - `Flights On Time Performance Beginning January 2018–2023.zip` – compressed archive containing the raw dataset and official data dictionary:  
+    - `OTP_2018_1_to_2023_1.csv` – raw on-time flight performance data from U.S. DOT  
+    - `OTP_dataset_readme.html` – official data dictionary from the Bureau of Transportation Statistics  
+
+- `Outputs/`  
+  - `A1 - Analysis of Carrier On-Time Performance by Awale Abdi.pdf` – full executive-style report with visual insights and findings  
+  - `A1 - Analysis of Carrier On-Time Performance by Awale Abdi-1.txt` – well-documented SQL queries used in Athena  
+  - `README.md` – project overview, methodology, and actionable insights summary  
+  - `Visualizations/` – contains AWS QuickSight charts and Athena-exported CSVs used to generate visual insights:  
+    - `Question 1 Visualization.png`, `Visualization 2.png`, ... – QuickSight bar, line, and scatter charts  
+    - `CSV 1.csv`, `CSV 4.3.csv`, etc. – Athena query result exports used for chart creation
+
 ## 🧩 Challenges Faced
 - Dataset limited to January 2023 (no seasonal trends possible).
 - Missing fields: passenger counts, flight time-of-day, full airline names.
@@ -36,4 +52,15 @@ The project was part of a capstone assignment in a Business Analytics program. I
 - No strong correlation found between inferred aircraft age and delays.
 - Urgent need for more complete and structured data collection by agencies.
 
-## 📁 Project Structure
+## 🔗 Data Source
+- [US DOT Bureau of Transportation Statistics](https://www.transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ)
+
+---
+
+### **Contact Me**
+
+For questions or collaboration, reach out via:
+
+- Awaleiabdi@outlook.com  
+- [LinkedIn](https://www.linkedin.com/in/awale-abdi/)
+
