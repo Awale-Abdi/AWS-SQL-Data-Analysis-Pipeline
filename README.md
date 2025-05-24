@@ -4,7 +4,7 @@
 
 This Excel-based time series forecasting project analyzes 15 years of U.S. hardware and tools retail sales data to generate a 12-month predictive sales forecast. Completed as part of a graduate-level **Supply Chain Analytics** course, the assignment placed me in the role of a **Supply-Chain Analyst** tasked with producing a highly accurate monthly sales forecast to inform internal resource planning—materials, staffing, and financial capacity for the upcoming fiscal year.
 
-The core analysis—including model construction, validation, and communication—was performed in under **90 minutes as part of a timed 3-hour final exam**, simulating a real-world corporate decision-making environment. The task required evaluating industry sales data (Sep 2005–Aug 2020), forecasting future demand (Sep 2020–Aug 2021), and benchmarking against actual 2021 results.
+The core analysis—including model construction, validation, and communication—was performed in under **90 minutes as part of a timed 3-hour timed project**, simulating a real-world corporate decision-making environment. The task required evaluating industry sales data (Sep 2005–Aug 2020), forecasting future demand (Sep 2020–Aug 2021), and benchmarking against actual 2021 results.
 
 📊 A separate *Forecast vs. Actual Sales* validation sheet is included to compare the forecast against real 2021 Census retail sales figures. This comparison demonstrates forecast realism and business applicability using Mean Absolute Percentage Error (MAPE) and trend visualization.
 
