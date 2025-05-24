@@ -1,0 +1,224 @@
+Question 1:
+
+Part 1:
+
+For running:
+
+SELECT
+    Year,
+    Marketing_Airline_Network,
+    COUNT(*) AS TotalFlights
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance"
+GROUP BY
+    Year,
+    Marketing_Airline_Network
+ORDER BY
+    Year,
+    TotalFlights DESC;
+
+With comments:
+
+-- Query for counting the total number of flights for each airline network in each year
+SELECT
+    Year, -- Selects the year of the flights
+    Marketing_Airline_Network, -- Selects the unique marketing airline network code
+    COUNT(*) AS TotalFlights -- Counts the total number of flights for each airline network in the specified year
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance" -- my table in Athena Query Editor
+GROUP BY
+    Year, Marketing_Airline_Network -- Grouping the results by year and marketing airline network
+ORDER BY
+    Year, TotalFlights DESC; -- Orders the results by year and total number of flights in descending order
+
+
+Part 2:
+
+
+For running:
+
+SELECT
+    FlightDate,
+    Marketing_Airline_Network,
+    COUNT(*) AS TotalFlights
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance"
+WHERE
+    Marketing_Airline_Network LIKE '%AA%'
+    OR Marketing_Airline_Network LIKE '%G4%'
+    OR Marketing_Airline_Network LIKE '%WN%'
+GROUP BY
+    FlightDate,
+    Marketing_Airline_Network
+ORDER BY
+    FlightDate,
+    TotalFlights DESC;
+
+
+With comments:
+
+-- Query for counting the total number of flights for selected airline networks on each flight date
+SELECT
+    FlightDate, -- Selects the flight date
+    Marketing_Airline_Network, -- Selects the unique marketing airline network code
+    COUNT(*) AS TotalFlights -- Counts the total number of flights for the specified airline networks on each flight date
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance" -- my table in Athena Query Editor
+WHERE
+    Marketing_Airline_Network LIKE '%AA%' -- Filter for airline network 'AA'
+    OR Marketing_Airline_Network LIKE '%G4%' -- Filter for airline network 'G4'
+    OR Marketing_Airline_Network LIKE '%WN%' -- Filter for airline network 'WN' -- filters to only show AA, G4 and WN to neaten my visualization as they all have the same trend (except one I will mention in my report)
+GROUP BY
+    FlightDate, Marketing_Airline_Network -- Groups the results by flight date and marketing airline network
+ORDER BY
+    FlightDate, TotalFlights DESC; -- Orders the results by flight date and total number of flights in descending order
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Question 2:
+
+For running:
+
+-- Analyze the best day of the week to minimize delays using specific time and delay columns
+SELECT
+    a.DayOfWeek,
+    AVG(CASE WHEN a.DepDel15 = 1 THEN 15 ELSE 0 END) AS Average_Departure_Delay
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance" a
+WHERE
+    a.DepDel15 IS NOT NULL
+GROUP BY
+    a.DayOfWeek
+ORDER BY
+    Average_Departure_Delay ASC;
+
+With comments:
+
+-- Analyzes the best day of the week to minimize departure delays using specific time and delay columns
+SELECT
+    a.DayOfWeek, -- Select the day of the week
+    AVG(CASE WHEN a.DepDel15 = 1 THEN 15 ELSE 0 END) AS Average_Departure_Delay -- Calculates the average departure delay for each day of the week
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance" AS a -- Specifies the source table as 'a'
+WHERE
+    a.DepDel15 IS NOT NULL -- Filters out records where departure delay indicator is not null
+GROUP BY
+    a.DayOfWeek -- Groups the results by day of the week
+ORDER BY
+    Average_Departure_Delay ASC; -- Orders the results by average departure delay in ascending order
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Question 3:
+
+
+For running:
+
+-- Query to analyze the number of flights between different locations over time
+SELECT
+    Origin AS OriginAirport,
+    Dest AS DestinationAirport,
+    FlightDate,
+    COUNT(*) AS NumberOfFlights
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance"
+GROUP BY
+    Origin,
+    Dest,
+    FlightDate
+ORDER BY
+    NumberOfFlights DESC, FlightDate;
+
+
+With comments:
+
+-- Analyze if older planes experience more delays using departure delay indicator and considering the number of flights
+SELECT
+    a.Tail_Number, -- Select the unique identifier for the aircraft
+    COUNT(*) AS NumberOfFlights, -- Calculate the number of flights for each aircraft
+    AVG(CAST(a.DepDel15 AS INT)) AS Average_Departure_Delay -- Calculate the average departure delay for each aircraft
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance" AS a -- Specifies the source table as 'a'
+WHERE
+    a.Tail_Number IS NOT NULL -- Filters out records where the tail number is not null
+    AND a.DepDel15 IS NOT NULL -- Filters out records where departure delay indicator is not null
+GROUP BY
+    a.Tail_Number -- Groups the results by the unique identifier for the aircraft
+ORDER BY
+    Average_Departure_Delay DESC; -- Orders the results by average departure delay in descending order
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Question 4:
+
+
+For running:
+
+-- Query to analyze the number of flights between different locations over time
+SELECT
+    Origin AS OriginAirport,
+    Dest AS DestinationAirport,
+    FlightDate,
+    COUNT(*) AS NumberOfFlights
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance"
+GROUP BY
+    Origin,
+    Dest,
+    FlightDate
+ORDER BY
+    NumberOfFlights DESC, FlightDate;
+
+With comments:
+
+-- Query to analyze the number of flights between different locations over time
+SELECT
+    Origin AS OriginAirport, -- Selects the origin airport code and aliases it as 'OriginAirport'
+    Dest AS DestinationAirport, -- Select the destination airport code and alias it as 'DestinationAirport'
+    FlightDate, -- Select the flight date
+    COUNT(*) AS NumberOfFlights -- Calculates the number of flights for each unique combination of origin, destination, and date
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance" -- Specify the source table
+GROUP BY
+    Origin, -- Group the results by origin airport
+    Dest, -- Group the results by destination airport
+    FlightDate -- Group the results by flight date
+ORDER BY
+    NumberOfFlights DESC, FlightDate; -- Orders the results by the number of flights in descending order and then by flight date
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Question 5:
+
+For running:
+
+SELECT
+    origin,
+    ROUND((SUM(CASE WHEN weatherdelay > 0 THEN 1 ELSE 0 END) * 100.0) / COUNT(*), 2) AS PercentageDelayedByWeather
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance"
+GROUP BY
+    origin
+ORDER BY
+    PercentageDelayedByWeather DESC;
+
+
+With comments:
+
+-- Analyze the percentage of flights delayed by weather at each origin airport
+SELECT
+    origin, -- Select the origin airport code
+    ROUND((SUM(CASE WHEN weatherdelay > 0 THEN 1 ELSE 0 END) * 100.0) / COUNT(*), 2) AS PercentageDelayedByWeather
+    -- Calculate the percentage of flights delayed by weather for each origin airport
+FROM
+    "a1assignment"."a1__analysis_of_carrier_on_time_performance"
+-- From the specified dataset
+GROUP BY
+    origin -- Group the results by origin airport
+ORDER BY
+    PercentageDelayedByWeather DESC;
+-- Order the results by the percentage of flights delayed by weather in descending order
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
