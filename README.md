@@ -19,11 +19,11 @@ The project was part of a capstone assignment in a Business Analytics program's 
 - **Tools Used**: AWS Learner Lab, Athena Query Editor, QuickSight
 
 ## ⚙️ Project Highlights
-- Created a schema via AWS Glue to parse raw CSV flight data.
-- Ran multiple complex SQL queries to transform raw records into business insights.
-- Incorporated creative logic to infer insights where direct fields were absent (e.g., estimating aircraft age from `tail_number` frequency).
-- Maintained SQL best practices: formatted code, added inline comments, grouped logic cleanly.
-- Produced an executive-style report summarizing trends, anomalies, and actionable recommendations.
+- Designed and deployed a full data analysis workflow using AWS S3, Glue, Athena, and QuickSight on a large public aviation dataset.
+- Wrote efficient, well-structured SQL queries to extract key business insights from over 500,000 flight records.
+- Applied analytical thinking to derive insights from imperfect data (e.g., estimating aircraft age via `tail_number` frequency in the absence of age fields).
+- Followed SQL development best practices: readable formatting, inline documentation, and clean logic structuring.
+- Delivered a polished, executive-ready report summarizing findings and strategic recommendations with visual support.
 
 
 ## 📁 Project Structure
