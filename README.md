@@ -1,7 +1,7 @@
 <h1 align="center">Airline Delay Analytics: AWS Athena + SQL Pipeline for US Flight Performance Insights</h1>
 
 ## 📊 Overview
-This project analyzes U.S. airline on-time performance using data from the U.S. Department of Transportation (Bureau of Transportation Statistics). The dataset was queried using AWS Athena after being processed through AWS Glue Crawlers and hosted on S3. Visualizations were created with Amazon QuickSight.
+This project analyzes U.S. airline on-time performance using data from the U.S. Department of Transportation (Bureau of Transportation Statistics). The dataset—over **500,000 flight records** spanning five years—was queried using AWS Athena after being processed through AWS Glue Crawlers and hosted on S3. Visualizations were created with Amazon QuickSight.
 
 The project was part of a capstone assignment in a Business Analytics program's *Business Analysis with Structured Data* course. It was completed in approximately **24 hours**, under intense time constraints, while balancing multiple concurrent deliverables. Despite receiving a messy and incomplete dataset, I engineered a full-stack cloud-native analytics pipeline and produced a professional report with executive-level insights using only SQL and AWS-native tools.
 
