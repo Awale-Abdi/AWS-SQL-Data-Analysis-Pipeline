@@ -3,7 +3,7 @@
 ## 📊 Overview
 This project analyzes U.S. airline on-time performance using data from the U.S. Department of Transportation (Bureau of Transportation Statistics). The dataset was queried using AWS Athena after being processed through AWS Glue Crawlers and hosted on S3. Visualizations were created with Amazon QuickSight.
 
-The project was part of a capstone assignment in a Business Analytics program's *Business Analysis with Structured Data* course, completed under significant time constraints—less than two days—while managing other concurrent coursework and deliverables. Despite this, I delivered a full-stack analytical solution using only SQL and cloud-native tools to extract actionable insights for executive stakeholders.
+The project was part of a capstone assignment in a Business Analytics program's *Business Analysis with Structured Data* course, completed under significant time constraints—less than two days—while managing other concurrent coursework and deliverables. Despite receiving an incomplete and messy dataset, I engineered a full-stack cloud-native analytics pipeline and produced a professional report with executive-level insights.
 
 ## 📌 Key Business Questions Answered
 1. **Top Airlines by Year** – Which carriers flew the most, and what patterns emerged?
@@ -19,12 +19,11 @@ The project was part of a capstone assignment in a Business Analytics program's 
 - **Tools Used**: AWS Learner Lab, Athena Query Editor, QuickSight
 
 ## ⚙️ Project Highlights
-- Designed and deployed a full data analysis workflow using AWS S3, Glue, Athena, and QuickSight on a large public aviation dataset.
-- Wrote efficient, well-structured SQL queries to extract key business insights from over 500,000 flight records.
-- Applied analytical thinking to derive insights from imperfect data (e.g., estimating aircraft age via `tail_number` frequency in the absence of age fields).
-- Followed SQL development best practices: readable formatting, inline documentation, and clean logic structuring.
-- Delivered a polished, executive-ready report summarizing findings and strategic recommendations with visual support.
-
+- Designed and deployed a complete data analysis workflow using AWS cloud tools on 500K+ flight records.
+- Wrote efficient, production-grade SQL queries to uncover business-critical insights.
+- Applied creative thinking to compensate for missing fields, including estimating aircraft age via `tail_number` frequency and restructuring analysis prompts to suit available data.
+- Identified flaws in the dataset (e.g., 100% weather delay rates, missing time-of-day info) and clearly communicated caveats to stakeholders.
+- Delivered a visually supported, executive-ready final report with actionable business recommendations under tight deadline pressure.
 
 ## 📁 Project Structure
 
@@ -38,30 +37,28 @@ The project was part of a capstone assignment in a Business Analytics program's 
   - `A1 - Analysis of Carrier On-Time Performance by Awale Abdi-1.txt` – well-documented SQL queries used in Athena  
   - `README.md` – project overview, methodology, and actionable insights summary  
   - `Visualizations/` – collection of supporting visual assets  
-    - Exported charts created with Amazon QuickSight (bar charts, line graphs, scatterplots, etc.)  
-    - CSVs exported from AWS Athena used to create or support visualizations (not all were used)  
-
+    - Amazon QuickSight charts (bar charts, line graphs, scatterplots)  
+    - Athena-exported CSVs used to build visualizations (not all used)  
 
 ## 🧩 Challenges Faced
-- Dataset limited to January 2023 (no seasonal trends possible).
-- Missing fields: passenger counts, flight time-of-day, full airline names.
-- Skewed results (e.g., 100% of flights delayed by weather) prompted cautionary interpretation.
+- Dataset limited to one month (January 2023) — no seasonal patterns or year-over-year trends possible.
+- Missing fields: airline names, time-of-day, passenger counts, delay reasons by cause.
+- Data contained anomalies (e.g., 100% weather delay at certain airports), requiring interpretive caution and framing.
 
 ## 📈 Actionable Insights
-- "AA" (American Airlines) led in flight count with 138.9K flights in January 2023.
-- Day 5 (Friday) had the fewest average delays during the month.
-- No strong correlation found between inferred aircraft age and delays.
-- Urgent need for more complete and structured data collection by agencies.
+- "AA" (American Airlines) led in flight volume with 138.9K flights in Jan 2023.
+- Day 5 (Friday) showed the lowest average delay times among all weekdays.
+- No strong evidence found linking higher aircraft usage (proxy for age) to increased delays.
+- Recommended significant data quality improvements for better analysis of passenger trends and delay attribution.
 
 ## 🔗 Data Source
 - [US DOT Bureau of Transportation Statistics](https://www.transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ)
 
 ---
 
-### **Contact Me**
+### **📬 Contact Me**
 
-For questions or collaboration, reach out via:
+For questions, collaborations, or opportunities:
 
-- Awaleiabdi@outlook.com  
-- [LinkedIn](https://www.linkedin.com/in/awale-abdi/)
-
+- 📧 Awaleiabdi@outlook.com  
+- 💼 [LinkedIn – Awale Abdi](https://www.linkedin.com/in/awale-abdi/)
