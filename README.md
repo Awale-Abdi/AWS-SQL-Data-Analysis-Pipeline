@@ -3,7 +3,7 @@
 ## 📊 Overview
 This project analyzes U.S. airline on-time performance using data from the U.S. Department of Transportation (Bureau of Transportation Statistics). The dataset was queried using AWS Athena after being processed through AWS Glue Crawlers and hosted on S3. Visualizations were created with Amazon QuickSight.
 
-The project was part of a capstone assignment in a Business Analytics program's *Business Analysis with Structured Data* course, completed under significant time constraints—less than two days—while managing other concurrent coursework and deliverables. Despite receiving an incomplete and messy dataset, I engineered a full-stack cloud-native analytics pipeline and produced a professional report with executive-level insights.
+The project was part of a capstone assignment in a Business Analytics program's *Business Analysis with Structured Data* course. It was completed in approximately **24 hours**, under intense time constraints, while balancing multiple concurrent deliverables. Despite receiving a messy and incomplete dataset, I engineered a full-stack cloud-native analytics pipeline and produced a professional report with executive-level insights using only SQL and AWS-native tools.
 
 ## 📌 Key Business Questions Answered
 1. **Top Airlines by Year** – Which carriers flew the most, and what patterns emerged?
@@ -46,7 +46,7 @@ The project was part of a capstone assignment in a Business Analytics program's 
 - Data contained anomalies (e.g., 100% weather delay at certain airports), requiring interpretive caution and framing.
 
 ## 📈 Actionable Insights
-- "AA" (American Airlines) led in flight volume with 138.9K flights in Jan 2023.
+- "AA" (American Airlines) led in flight volume.
 - Day 5 (Friday) showed the lowest average delay times among all weekdays.
 - No strong evidence found linking higher aircraft usage (proxy for age) to increased delays.
 - Recommended significant data quality improvements for better analysis of passenger trends and delay attribution.
