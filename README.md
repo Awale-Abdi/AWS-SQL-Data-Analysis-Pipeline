@@ -46,7 +46,7 @@ The project was part of a capstone assignment in a Business Analytics program's 
 - Data contained anomalies (e.g., 100% weather delay at certain airports), requiring interpretive caution and framing.
 
 ## 📈 Actionable Insights
-- "AA" (American Airlines) led in flight volume.
+- "AA" (American Airlines) led in flight volume with 138.9K recorded flight segments in Jan 2023 (includes recurring and code-share flights).
 - Day 5 (Friday) showed the lowest average delay times among all weekdays.
 - No strong evidence found linking higher aircraft usage (proxy for age) to increased delays.
 - Recommended significant data quality improvements for better analysis of passenger trends and delay attribution.
