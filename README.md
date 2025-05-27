@@ -20,7 +20,7 @@ The project was part of a capstone assignment in a Business Analytics program's 
 
 ## ⚙️ Project Highlights
 - Designed and deployed a complete data analysis workflow using AWS cloud tools on 500K+ flight records.
-- Wrote efficient, production-grade SQL queries to uncover business-critical insights.
+- Delivered insight-driven SQL analytics using AWS Athena and clean query logic to solve business problems under real-world data limitations.
 - Applied creative thinking to compensate for missing fields, including estimating aircraft age via `tail_number` frequency and restructuring analysis prompts to suit available data.
 - Identified flaws in the dataset (e.g., 100% weather delay rates, missing time-of-day info) and clearly communicated caveats to stakeholders.
 - Delivered a visually supported, executive-ready final report with actionable business recommendations under tight deadline pressure.
