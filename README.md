@@ -56,7 +56,7 @@ The project was part of a capstone assignment in a Business Analytics program's 
 
 ---
 
-### **📬 Contact Me**
+### **Contact Me**
 
 For questions, collaborations, or opportunities:
 
